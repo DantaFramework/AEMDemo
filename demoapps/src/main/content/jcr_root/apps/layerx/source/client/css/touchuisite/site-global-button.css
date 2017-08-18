@@ -1,0 +1,18 @@
+
+#site-global-button-touch-ui {
+    position: fixed;
+    bottom: 2em;
+    right: 25px;
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    opacity: 0.9;
+    background-color: #4b4b4b;
+    border-color: transparent;
+    opacity: 1.0;
+    padding: 1em;
+    z-index: 100000;
+}
+
+#site-global-button-touch-ui:hover {
+    color: rgb(255,255,255);
+}

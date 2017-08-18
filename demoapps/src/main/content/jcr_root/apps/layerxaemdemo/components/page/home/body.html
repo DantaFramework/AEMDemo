@@ -1,0 +1,25 @@
+<body ng-app="layerXApp" xk-path="{% page.path %}" class="{%#each page.bodyClasses %}{% this %} {%/each %}">
+{%> siteglobalbutton %}
+{%> header %}
+<div class="container content">
+
+	typekit:
+    {% typekit %}
+
+    {%include "cebpar" resourceType="layerxaemdemo/components/section/cebparsys"%}
+    <div class="clearfix"></div>
+
+    {%include "cebipar" resourceType="layerxaemdemo/components/section/cebiparsys"%}
+    <div class="clearfix"></div>
+
+    <div class="jumbotron">
+        <div><strong>Live Copy Values:</strong></div>
+        <ul>
+            <li>bgImage: {%page.bgImage%}</li>
+            <li>bgposition: {%page.bgposition%}</li>
+            <li>siteID: {%page.jcr:siteID%}</li>
+        </ul>
+    </div>
+</div>
+{%> footer %}
+</body>

@@ -1,0 +1,7 @@
+{%#if content.text %}
+    {%#if content.url%}
+    <a href="{%content.url%}" title="{%content.titleText%}">{%content.text%}</a>
+    {%/if%}
+    {%#unless content.text%}Configure your Component{%/unless%}
+{%/if%}
+{%#unless content.text%}Configure your Component{%/unless%}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:created="{Date}2017-07-14T18:49:36.834-06:00"
+    jcr:createdBy="admin"
+    jcr:description=""
+    jcr:lastModified="{Date}2017-07-14T18:49:36.834-06:00"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="vlt:PackageDefinition"
+    acHandling="merge_preserve"
+    buildCount="2"
+    builtWith="Adobe Experience Manager-6.3.0"
+    fixedBugs=""
+    group="my_packages"
+    lastUnwrapped="{Date}2017-07-14T18:49:36.834-06:00"
+    lastUnwrappedBy="admin"
+    lastWrapped="{Date}2017-07-14T18:49:36.834-06:00"
+    lastWrappedBy="admin"
+    name="layerx-base-components"
+    providerLink=""
+    providerName=""
+    providerUrl=""
+    testedWith=""
+    version="140717">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/apps/layerx"
+            rules="[]"/>
+        <f1
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/home/users/system/layerx"
+            rules="[]"/>
+        <f2
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/apps/rep:policy"
+            rules="[]"/>
+        <f3
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/content/rep:policy"
+            rules="[]"/>
+        <f4
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/conf/rep:policy"
+            rules="[]"/>
+    </filter>
+</jcr:root>

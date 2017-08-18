@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/layerx"/>
+    <filter root="/apps/layerxaemdemo"/>
+    <filter root="/home/users/system/layerx"/>
+    <filter root="/apps/rep:policy"/>
+    <filter root="/content/rep:policy"/>
+    <filter root="/conf/rep:policy"/>
+</workspaceFilter>

@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+{%#if content.pageTitle %}
+	<title>{% content.pageTitle %}</title>
+	<meta name="title" content="{% content.pageTitle %}">
+{%else%}
+    {%#if page.title %}
+        <title>{% page.title %}</title>
+	<meta name="title" content="{% page.title %}">
+    {%else%}
+        <title>{% page.pageName %}</title>
+		<meta name="title" content="{% page.pageName %}">
+    {%/if%}
+{%/if%}
+{%#if page.description %}
+	<meta property="description" content="{% page.description %}"/>
+{%/if%}
+{%#if page.keywords %}
+	<meta name="keywords" content="{% page.keywords %}">
+{%/if%}
+{%#if page.tags %}
+	<meta name="tags" content="{% page.tags %}">
+{%/if%}
+{%#if page.subtitle %}
+	<meta name="subtitle" content="{% page.subtitle %}">
+{%/if%}

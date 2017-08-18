@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Inheritance Paragraph System (iparsys)"
+    title="Inheritance Paragraph System"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <inheritance
+            jcr:primaryType="cq:Widget"
+            boxLabel="Cancel Inheritance"
+            fieldDescription="If checked the paragraphs of this system are not inherited to child pages."
+            fieldLabel="Inheritance"
+            inputValue="cancel"
+            name="./inheritance"
+            type="checkbox"
+            xtype="selection"/>
+        <propagate
+            jcr:primaryType="cq:Widget"
+            boxLabel="Disable Inheritance"
+            fieldDescription="If checked the paragraphs of the parent system are not inherited."
+            fieldLabel=""
+            inputValue="cancel"
+            name="./iparsys_fake_par/inheritance"
+            type="checkbox"
+            xtype="selection"/>
+        <fake_rt
+            jcr:primaryType="cq:Widget"
+            ignoreData="{Boolean}true"
+            name="./iparsys_fake_par/sling:resourceType"
+            value="foundation/components/iparsys/par"
+            xtype="hidden"/>
+    </items>
+</jcr:root>

@@ -1,0 +1,18 @@
+<%
+
+    for(int i = 1; i <= numPars; i++) {
+
+        if (i == 0 || parName.startsWith("fwpar")) {
+            %><%@include file="top-rights/default.jsp"%><%
+        }
+        else if (parName.startsWith("fwipar")) {
+            if (parName.equals("fwipar"+i)) {
+                %><%@include file="top-rights/special.jsp"%><%
+            }
+            else {
+                %><%@include file="top-rights/default.jsp"%><%
+            }
+        }
+    }
+
+%>

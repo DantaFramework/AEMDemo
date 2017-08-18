@@ -1,0 +1,16 @@
+
+#site-global-button {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 12px;
+    padding: 1em;
+    z-index: 100000;
+}
+
+#site-global-button:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
+}

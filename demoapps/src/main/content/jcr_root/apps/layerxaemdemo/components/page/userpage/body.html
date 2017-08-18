@@ -1,0 +1,19 @@
+<body ng-app="layerXApp" xk-path="{% page.path %}"
+      class="userpage {%page.config.userGroups.ceb_users%} {%#each page.bodyClasses %}{% this %} {%/each %}">
+    {%> siteglobalbutton %}
+    {%> header %}
+    <div class="container">
+        <div class="content">
+            {%#if page.config.userGroups.ceb_users%}
+            <div class="row">
+                <div class="col-lg-12">
+                    {%include "par" resourceType="foundation/components/parsys"%}
+                </div>
+            </div>
+            {%else%}
+            {%include "login" resourceType="layerx/components/section/login"%}
+            {%/if%}
+        </div>
+    </div>
+    {%> footer %}
+</body>
