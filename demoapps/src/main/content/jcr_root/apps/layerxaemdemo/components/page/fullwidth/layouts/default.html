@@ -1,8 +1,0 @@
-<sly data-sly-use.cebFullwidthTemplate="layerx.demo.ceb.components.CEBFullwidthTmpl">
-    <sly data-sly-list.par="${cebFullwidthTemplate.pars}">
-        <sly data-sly-test="${par.isDefault}">
-            <sly data-sly-resource="${@path=par.name, resourceType=par.resType}"></sly>
-            <div class="clearfix"></div>
-        </sly>
-    </sly>
-</sly>

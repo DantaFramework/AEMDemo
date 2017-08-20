@@ -68,7 +68,7 @@
                                                 fieldLabel="Tags"
                                                 name="./cq:tags"
                                                 renderReadOnly="{Boolean}true"
-                                                rootPath="/etc/tags/ceb"/>
+                                                rootPath="/etc/tags/layerxaemdemo"/>
                                             <hideinnav
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/checkbox"
@@ -205,11 +205,11 @@
                             </column>
                         </items>
                     </basic>
-                    <ceb
+                    <layerxaemdemo
                         cq:showOnCreate="{Boolean}false"
                         granite:rel="cq-siteadmin-admin-properties-livecopy"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="CEB Setting"
+                        jcr:title="LayerX AEM Demo Setting"
                         sling:resourceType="granite/ui/components/foundation/section">
                         <layout
                             jcr:primaryType="nt:unstructured"
@@ -274,15 +274,10 @@
                                                 value="bottom right"/>
                                         </items>
                                     </B_bgposition>
-                                    <C_siteID
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                        fieldLabel="Site ID"
-                                        name="./jcr:siteID"/>
                                 </items>
                             </column>
                         </items>
-                    </ceb>
+                    </layerxaemdemo>
                 </items>
             </tabs>
         </items>

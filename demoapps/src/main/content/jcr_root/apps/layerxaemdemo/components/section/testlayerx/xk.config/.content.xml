@@ -3,4 +3,4 @@
     jcr:primaryType="nt:unstructured"
     xk_clientAccessible="{Boolean}true"
     xk_componentCategory="[testlayerx]"
-    xk_containerClasses="[xk-carousel]"/>
+    xk_containerClasses="[xk-testlayerx]"/>

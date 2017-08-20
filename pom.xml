@@ -158,12 +158,13 @@
                             <goals>
                                 <goal>scr</goal>
                             </goals>
+                            <!--
                             <configuration>
-                                <!-- Private service properties for all services. -->
                                 <properties>
                                     <service.vendor>Adobe</service.vendor>
                                 </properties>
                             </configuration>
+                            -->
                         </execution>
                     </executions>
                     <dependencies>
@@ -179,12 +180,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
                     <version>2.5.2</version>
-                </plugin>
-                <!-- Maven Surefire Plugin -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.18.1</version>
                 </plugin>
                 <!-- Maven Failsafe Plugin -->
                 <plugin>
@@ -310,17 +305,14 @@
     <profiles>
         <profile>
             <id>adobe-public</id>
-
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-
             <properties>
                 <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
                 <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
                 <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
             </properties>
-
             <repositories>
                 <repository>
                     <id>adobe-public-releases</id>
@@ -334,7 +326,6 @@
                     </snapshots>
                 </repository>
             </repositories>
-
             <pluginRepositories>
                 <pluginRepository>
                     <id>adobe-public-releases</id>
@@ -352,7 +343,21 @@
     </profiles>
     <dependencyManagement>
         <dependencies>
-            <!-- OSGi Dependencies -->
+            <dependency>
+                <groupId>LayerX</groupId>
+                <artifactId>API</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>LayerX</groupId>
+                <artifactId>Core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>LayerX</groupId>
+                <artifactId>AEM</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.scr</artifactId>
@@ -377,15 +382,12 @@
                 <version>4.2.0</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- Logging Dependencies -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>1.7.6</version>
                 <scope>provided</scope>
             </dependency>
-
-            <!-- Apache Sling Dependencies -->
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.models.api</artifactId>
@@ -397,8 +399,6 @@
                 <artifactId>org.apache.sling.api</artifactId>
                 <version>2.11.0</version>
             </dependency>
-
-            <!-- Servlet API -->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
@@ -411,48 +411,19 @@
                 <version>2.1</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- JCR -->
             <dependency>
                 <groupId>javax.jcr</groupId>
                 <artifactId>jcr</artifactId>
                 <version>2.0</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- Testing -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.8.2</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-simple</artifactId>
-                <version>1.7.7</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-all</artifactId>
-                <version>1.9.5</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>junit-addons</groupId>
-                <artifactId>junit-addons</artifactId>
-                <version>1.4</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- AEM Dependencies -->
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>uber-jar</artifactId>
-                <!-- <version>6.2.0</version>  -->
                 <version>6.2.0-SP1</version>
                 <classifier>obfuscated-apis</classifier>
                 <scope>provided</scope>
             </dependency>
-            <!-- Apps Dependencies -->
             <dependency>
                 <groupId>org.jsoup</groupId>
                 <artifactId>jsoup</artifactId>
@@ -469,15 +440,15 @@
                 <version>2.4</version>
             </dependency>
             <dependency>
-                <groupId>commons-validator</groupId>
-                <artifactId>commons-validator</artifactId>
-                <version>1.4.1</version>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-bundle</artifactId>
+                <version>3.6.0</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.google.http-client</groupId>
-                <artifactId>google-http-client</artifactId>
-                <version>1.19.0</version>
-                <scope>provided</scope>
+                <groupId>net.minidev</groupId>
+                <artifactId>json-smart</artifactId>
+                <version>1.0.9</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

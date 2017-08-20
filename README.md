@@ -29,4 +29,10 @@ Read [here](CONTRIBUTING.md) for more information.
 
 ## Deploy to AEM
 
+Build to author instance
+
     mvn clean install -PautoInstallPackage
+
+Build to publish instance
+
+    mvn clean install -PautoInstallPackagePublish

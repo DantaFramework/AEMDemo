@@ -18,8 +18,6 @@
 
 package layerx.aemdemo;
 
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Deactivate;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
@@ -38,13 +36,11 @@ public class AEMDemoActivator
     // Private variables
     private final Logger log = LoggerFactory.getLogger(getClass());
 
-    @Activate
     public void start(BundleContext bundleContext)
             throws Exception {
         log.info("AEM Demo - Activated!!!");
     }
 
-    @Deactivate
     public void stop(BundleContext bundleContext)
             throws Exception {
         log.info("AEM Demo - DeActivated!!!");
