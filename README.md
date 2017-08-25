@@ -1,17 +1,17 @@
-# LayerX - AEM Demo Project
+# Danta - AEM Demo Project
 
-LayerX - AEM Demo Project is the maven project contained source codes specifically for demoing LayerX capability on AEM.
+Danta - AEM Demo Project is the maven project contained source codes specifically for demoing Danta capability on AEM.
 
 ## Documentation
 
- * Read our [official documentation](http://layerx.technologies.io/docs/) for more information.
+ * Read our [official documentation](http://danta.technologies.io/docs/) for more information.
 
 ## Prerequisites
 
- * [LayerX - Parent Project](https://github.com/layerx/Parent)
- * [LayerX - API Project](https://github.com/layerx/API)
- * [LayerX - Core Project](https://github.com/layerx/Core)
- * [LayerX - AEM Project](https://github.com/layerx/AEM)
+ * [Danta - Parent Project](https://github.com/DataFramework/Parent)
+ * [Danta - API Project](https://github.com/DataFramework/API)
+ * [Danta - Core Project](https://github.com/DataFramework/Core)
+ * [Danta - AEM Project](https://github.com/DataFramework/AEM)
  * Java 8
  * AEM 6.2 or later (for integration with AEM)
 

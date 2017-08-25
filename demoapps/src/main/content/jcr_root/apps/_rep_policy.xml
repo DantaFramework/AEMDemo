@@ -3,6 +3,6 @@
     jcr:primaryType="rep:ACL">
     <allow18
         jcr:primaryType="rep:GrantACE"
-        rep:principalName="layerx-config-service"
+        rep:principalName="danta-config-service"
         rep:privileges="{Name}[jcr:read]"/>
 </jcr:root>

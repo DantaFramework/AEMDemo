@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-- LayerX AEM Bundle
+- Danta AEM Bundle
 -
 - Copyright (C) 2017 Tikal Technologies, Inc. All rights reserved.
 -
@@ -19,15 +19,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>LayerX</groupId>
-        <artifactId>LayerXAEMDemo</artifactId>
+        <groupId>Danta</groupId>
+        <artifactId>DantaAEMDemo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>LayerXAEMDemoApps</artifactId>
+    <artifactId>DantaAEMDemoApps</artifactId>
     <packaging>content-package</packaging>
-    <name>LayerX AEM Demo - Apps</name>
-    <description>UI apps package for LayerX AEM Demo</description>
+    <name>Danta AEM Demo - Apps</name>
+    <description>UI apps package for Danta AEM Demo</description>
     <build>
         <resources>
             <resource>
@@ -81,14 +81,14 @@
                 <artifactId>content-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <group>LayerX</group>
+                    <group>Danta</group>
                     <filterSource>${basedir}/src/main/content/META-INF/vault/filter.xml</filterSource>
                     <failOnError>true</failOnError>
                     <embeddeds>
                         <embedded>
-                            <groupId>LayerX</groupId>
-                            <artifactId>LayerXAEMDemoBundle</artifactId>
-                            <target>/apps/layerx/install</target>
+                            <groupId>Danta</groupId>
+                            <artifactId>DantaAEMDemoBundle</artifactId>
+                            <target>/apps/danta/install</target>
                         </embedded>                  
                     </embeddeds>
                     <properties>
@@ -156,8 +156,8 @@
     </profiles>
     <dependencies>
         <dependency>
-            <groupId>LayerX</groupId>
-            <artifactId>LayerXAEMDemoBundle</artifactId>
+            <groupId>Danta</groupId>
+            <artifactId>DantaAEMDemoBundle</artifactId>
             <version>${project.version}</version>
         </dependency>
 		<dependency>

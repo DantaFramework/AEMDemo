@@ -1,5 +1,0 @@
-#base=.
-
-LayerX.js
-GlobalButton.js
-GlobalButtonInit.js

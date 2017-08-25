@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-- LayerX AEM Bundle
+- Danta AEM Bundle
 -
 - Copyright (C) 2017 Tikal Technologies, Inc. All rights reserved.
 -
@@ -19,15 +19,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>LayerX</groupId>
-        <artifactId>LayerXAEMDemo</artifactId>
+        <groupId>Danta</groupId>
+        <artifactId>DantaAEMDemo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>LayerXAEMDemoBundle</artifactId>
+    <artifactId>DantaAEMDemoBundle</artifactId>
     <packaging>bundle</packaging>
-    <name>LayerX AEM Demo - Bundle</name>
-    <description>Core bundle for LayerX AEM Demo</description>
+    <name>Danta AEM Demo - Bundle</name>
+    <description>Core bundle for Danta AEM Demo</description>
     <build>
         <plugins>
             <plugin>
@@ -40,20 +40,20 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>layerx.aemdemo</Bundle-SymbolicName>
-                        <Bundle-Name>LayerX AEM Demo</Bundle-Name>
+                        <Bundle-SymbolicName>danta.aemdemo</Bundle-SymbolicName>
+                        <Bundle-Name>Danta AEM Demo</Bundle-Name>
                         <Export-Package>
-                            layerx.aemdemo
+                            danta.aemdemo
                         </Export-Package>
                         <Import-Package>
-                            layerx.api.*; resolution:=mandatory,
-                            layerx; resolution:=mandatory,
-                            layerx.core.*; resolution:=mandatory,
+                            danta.api.*; resolution:=mandatory,
+                            danta; resolution:=mandatory,
+                            danta.core.*; resolution:=mandatory,
                             com.adobe.acs.commons.images; resolution:=mandatory,
                             com.adobe.acs.commons.util; resolution:=mandatory,
                             *;resolution:=optional
                         </Import-Package>
-                        <Bundle-Activator>layerx.aemdemo.AEMDemoActivator</Bundle-Activator>
+                        <Bundle-Activator>danta.aemdemo.AEMDemoActivator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>
@@ -72,7 +72,7 @@
                         <groupId>org.apache.sling</groupId>
                         <artifactId>maven-sling-plugin</artifactId>
                         <configuration>
-                            <slingUrlSuffix>/apps/layerx/install/</slingUrlSuffix>
+                            <slingUrlSuffix>/apps/danta/install/</slingUrlSuffix>
                             <failOnError>true</failOnError>
                         </configuration>
                     </plugin>
@@ -82,17 +82,17 @@
     </profiles>
     <dependencies>
         <dependency>
-            <groupId>LayerX</groupId>
+            <groupId>Danta</groupId>
             <artifactId>API</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>LayerX</groupId>
+            <groupId>Danta</groupId>
             <artifactId>Core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>LayerX</groupId>
+            <groupId>Danta</groupId>
             <artifactId>AEM</artifactId>
             <version>${project.version}</version>
         </dependency>

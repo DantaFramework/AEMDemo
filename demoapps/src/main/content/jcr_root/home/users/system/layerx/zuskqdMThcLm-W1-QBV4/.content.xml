@@ -2,5 +2,5 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
     jcr:primaryType="rep:SystemUser"
     jcr:uuid="b494816e-d0b0-3957-88f7-46adbcc3a4e5"
-    rep:authorizableId="layerx-config-service"
-    rep:principalName="layerx-config-service"/>
+    rep:authorizableId="danta-config-service"
+    rep:principalName="danta-config-service"/>

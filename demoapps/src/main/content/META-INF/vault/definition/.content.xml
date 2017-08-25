@@ -15,7 +15,7 @@
     lastUnwrappedBy="admin"
     lastWrapped="{Date}2017-07-14T18:49:36.834-06:00"
     lastWrappedBy="admin"
-    name="layerx-base-components"
+    name="danta-base-components"
     providerLink=""
     providerName=""
     providerUrl=""
@@ -25,12 +25,12 @@
         <f0
             jcr:primaryType="nt:unstructured"
             mode="replace"
-            root="/apps/layerx"
+            root="/apps/danta"
             rules="[]"/>
         <f1
             jcr:primaryType="nt:unstructured"
             mode="replace"
-            root="/home/users/system/layerx"
+            root="/home/users/system/danta"
             rules="[]"/>
         <f2
             jcr:primaryType="nt:unstructured"
