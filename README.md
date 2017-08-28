@@ -49,3 +49,8 @@ This is to "danta-config-service". To fix this:
  * Upload [SystemUser-DantaDemo-1.0.0.zip](https://github.com/DantaFramework/AEMDemo/blob/master/SystemUser-DantaDemo-1.0.0.zip)
  * Install
  * Run maven build command again (re: Deploy to AEM)
+ 
+## Credit
+
+Special thanks to Jose Alvarez, who named Danta for the powerful ancient Mayan pyramid, La Danta. 
+La Danta is the largest pyramid in El Mirador—the biggest Mayan city found in Petén, Guatemala.
