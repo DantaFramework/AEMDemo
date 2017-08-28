@@ -31,8 +31,8 @@ Read [here](CONTRIBUTING.md) for more information.
 
 Build to author instance
 
-    mvn clean install -PautoInstallPackage
+    mvn clean install -Pdeploy-aem
 
 Build to publish instance
 
-    mvn clean install -PautoInstallPackagePublish
+    mvn clean install -Pdeploy-aem-publish

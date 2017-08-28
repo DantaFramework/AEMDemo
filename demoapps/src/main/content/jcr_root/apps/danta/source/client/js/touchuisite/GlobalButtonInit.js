@@ -110,8 +110,8 @@ $(document).ready(function() {
                 type: ""
             });
 
-            var layerXGlobalDialog = new ns.edit.Dialog(editable);
-            ns.DialogFrame.openDialog(layerXGlobalDialog);
+            var dantaGlobalDialog = new ns.edit.Dialog(editable);
+            ns.DialogFrame.openDialog(dantaGlobalDialog);
         } else {
             $('#site-global-button-touch-ui').prop('disabled', true);
         }
