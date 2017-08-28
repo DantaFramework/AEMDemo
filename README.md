@@ -36,3 +36,16 @@ Build to author instance
 Build to publish instance
 
     mvn clean install -Pdeploy-aem-publish
+    
+## Maven Build Failure
+
+If maven build failed with error message, similar to below
+
+    Request failed: org.apache.jackrabbit.vault.packaging.PackageException: javax.jcr.nodetype.ConstraintViolationException: OakConstraint0021: /home/users/system/danta/zuskqdMThcLm-W1-QBV4[[rep:SystemUser]]: Mandatory property rep:principalName not found in a new node (500)
+
+This is to "danta-config-service". To fix this:
+
+ * Go to Package Manager (/crx/packmgr/index.jsp)
+ * Upload [SystemUser-DantaDemo-1.0.0.zip](https://github.com/DantaFramework/AEMDemo/blob/master/SystemUser-DantaDemo-1.0.0.zip)
+ * Install
+ * Run maven build command again (re: Deploy to AEM)
