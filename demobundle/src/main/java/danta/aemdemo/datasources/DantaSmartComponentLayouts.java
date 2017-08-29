@@ -4,6 +4,14 @@ import com.adobe.cq.sightly.WCMUsePojo;
 import com.adobe.granite.ui.components.ds.DataSource;
 import com.adobe.granite.ui.components.ds.SimpleDataSource;
 import com.adobe.granite.ui.components.ds.ValueMapResource;
+import com.google.common.collect.Sets;
+import danta.api.ExecutionContext;
+import danta.api.TemplateContentModel;
+import danta.api.exceptions.ProcessException;
+import danta.core.contextprocessors.AbstractCheckComponentCategoryContextProcessor;
+import org.apache.felix.scr.annotations.Component;
+import org.apache.felix.scr.annotations.Service;
+import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceMetadata;
 import org.apache.sling.api.resource.ValueMap;
@@ -11,48 +19,38 @@ import org.apache.sling.api.wrappers.ValueMapDecorator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
-public class SmartComponentLayouts extends WCMUsePojo {
+import static danta.Constants.LOW_PRIORITY;
+import static danta.aem.Constants.JCR_CONTENT;
+import static danta.aem.Constants.SLING_HTTP_REQUEST;
 
-    protected final Logger log = LoggerFactory.getLogger(this.getClass());
+@Component
+@Service
+public class DantaSmartComponentLayouts
+        extends AbstractCheckComponentCategoryContextProcessor<TemplateContentModel> {
 
     @Override
-    public void activate() throws Exception {
-        Resource datasource = getResource().getChild("datasource");
-        if (datasource != null) {
-            final List<Resource> fakeResourceList = new ArrayList<>();
-            ValueMap vm;
-            vm = new ValueMapDecorator(new HashMap());
-            vm.put("value", "");
-            vm.put("text", "Select one");
-            fakeResourceList.add(new ValueMapResource(getResourceResolver(), new ResourceMetadata(), "nt:unstructured", vm));
+    public Set<String> anyOf() {
+        return Sets.newHashSet("testdanta-smartcomponentlayouts");
+    }
 
-            String path = getResource().getPath();
-            path = path.split("/cq:dialog/")[0];
-            path = path.split("/dialog/")[0];
-            Resource resource = getResourceResolver().getResource(path);
+    @Override
+    public int priority() {
+        return LOW_PRIORITY;
+    }
 
-            if (resource != null && resource.hasChildren()) {
-                Iterator<Resource> resourceIterator = resource.listChildren();
-                while (resourceIterator.hasNext()) {
-                    String value = resourceIterator.next().getName().replaceAll(".html", "");
-                    if (value.startsWith("layout_")) {
-                        String text = value.replace("layout_", "").replace("_", " ");
-                        vm = new ValueMapDecorator(new HashMap());
-                        vm.put("value", value);
-                        vm.put("text", text);
-                        fakeResourceList.add(new ValueMapResource(getResourceResolver(), new ResourceMetadata(), "nt:unstructured", vm));
-                    }
-                }
-            }
-
-            //Create a DataSource that is used to populate the drop-down control
-            DataSource ds = new SimpleDataSource(fakeResourceList.iterator());
-            getRequest().setAttribute(DataSource.class.getName(), ds);
+    @Override
+    public void process(final ExecutionContext executionContext, final TemplateContentModel contentModel)
+            throws ProcessException {
+        try {
+            final SlingHttpServletRequest request = (SlingHttpServletRequest) executionContext.get(SLING_HTTP_REQUEST);
+            final Resource resource = request.getResource();
+            Resource datasource = resource.getChild("datasource");
+            contentModel.set("datasource", datasource.getPath());
+        }
+        catch (Exception e) {
+            log.error(e.getMessage(), e);
         }
     }
 }

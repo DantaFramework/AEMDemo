@@ -33,7 +33,7 @@
                         name="./style">
                         <datasource
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="/apps/dantaaemdemo/datasources/smartcomponentlayouts"/>
+                            sling:resourceType="/apps/dantaaemdemo/datasource/smartcomponentlayouts"/>
                     </C_style>
                 </items>
             </column>
