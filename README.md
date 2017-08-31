@@ -30,7 +30,7 @@ Danta - AEM Demo Project is the maven project contained source codes specificall
 
 ### Official documentation
 
- * Read our [official documentation](http://danta.tikaltechnologies.io/docs) for more information.
+* Read our [official documentation](https://danta.tikaltechnologies.io/docs/aem/index.html) for more information.
 
 ## License
 
