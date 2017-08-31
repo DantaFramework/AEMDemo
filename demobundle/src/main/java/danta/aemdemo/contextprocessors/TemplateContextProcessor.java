@@ -10,6 +10,8 @@ import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
+
+import java.util.Collections;
 import java.util.Set;
 
 import static danta.Constants.*;
@@ -20,9 +22,11 @@ import static danta.aem.Constants.*;
 public class TemplateContextProcessor
         extends AbstractCheckComponentCategoryContextProcessor<TemplateContentModel> {
 
+    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("dantaaemdemo"));
+
     @Override
     public Set<String> anyOf() {
-        return Sets.newHashSet("dantaaemdemo");
+        return ANY_OF;
     }
 
     @Override
