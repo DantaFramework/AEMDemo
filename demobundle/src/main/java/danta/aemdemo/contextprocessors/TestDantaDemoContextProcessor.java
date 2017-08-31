@@ -12,6 +12,7 @@ import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.ValueMap;
 
+import java.util.Collections;
 import java.util.Set;
 
 import static danta.Constants.LOW_PRIORITY;
@@ -23,9 +24,11 @@ import static danta.aem.Constants.SLING_HTTP_REQUEST;
 public class TestDantaDemoContextProcessor extends
         AbstractCheckComponentCategoryContextProcessor<ContentModel> {
 
+    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("testdanta"));
+
     @Override
     public Set<String> anyOf() {
-        return Sets.newHashSet("testdanta");
+        return ANY_OF;
     }
 
     @Override
