@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+          jcr:primaryType="rep:SystemUser"
+          jcr:uuid="a0992f2a-c07f-3d8a-8a2f-a3aa3ca95792"
+          rep:authorizableId="danta-jcrsyncr-service"
+          rep:principalName="danta-jcrsyncr-service"/>
