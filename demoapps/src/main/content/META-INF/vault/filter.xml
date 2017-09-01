@@ -2,6 +2,7 @@
 <workspaceFilter version="1.0">
     <filter root="/apps/danta"/>
     <filter root="/apps/dantaaemdemo"/>
+    <filter root="/apps/jcrsyncr"/>
     <filter root="/home/users/system/danta"/>
     <filter root="/apps/rep:policy"/>
     <filter root="/content/rep:policy"/>
