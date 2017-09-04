@@ -68,7 +68,7 @@
                                                 fieldLabel="Tags"
                                                 name="./cq:tags"
                                                 renderReadOnly="{Boolean}true"
-                                                rootPath="/etc/tags/dantaaemdemo"/>
+                                                rootPath="/etc/tags/dantademo"/>
                                             <hideinnav
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/checkbox"
@@ -205,7 +205,7 @@
                             </column>
                         </items>
                     </basic>
-                    <dantaaemdemo
+                    <dantademo
                         cq:showOnCreate="{Boolean}false"
                         granite:rel="cq-siteadmin-admin-properties-livecopy"
                         jcr:primaryType="nt:unstructured"
@@ -277,7 +277,7 @@
                                 </items>
                             </column>
                         </items>
-                    </dantaaemdemo>
+                    </dantademo>
                 </items>
             </tabs>
         </items>

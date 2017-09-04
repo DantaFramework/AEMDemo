@@ -6,5 +6,5 @@
     ranking="{Long}100">
     <jcr:content
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="dantaaemdemo/components/page/home"/>
+        sling:resourceType="dantademo/components/page/home"/>
 </jcr:root>
