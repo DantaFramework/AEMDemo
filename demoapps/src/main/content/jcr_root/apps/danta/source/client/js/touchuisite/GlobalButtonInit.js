@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	setTimeout(function() {
-    	if (Danta.site.GlobalButton.isLayerxPage() === true) {
+    	if (Danta.site.GlobalButton.isDantaPage() === true) {
             var currentLayer = Danta.site.GlobalButton.getEditorLayerFromCookies();
             var currentLayerTemplate = Danta.site.GlobalButton.getEditorLayerTemplateFromCookies();
             if ( currentLayer === 'Design' || currentLayer === 'Edit' ) {
@@ -38,7 +38,7 @@ $(document).ready(function() {
      */
     channel.on("click", ".js-editor-LayerSwitcherTrigger", function (event) {
         event.preventDefault();
-		if (Danta.site.GlobalButton.isLayerxPage() === true) {
+		if (Danta.site.GlobalButton.isDantaPage() === true) {
             var currentDataLayerAtt = event.currentTarget.getAttribute('data-layer');
             if (currentDataLayerAtt === 'Design' || currentDataLayerAtt === 'Edit' || currentDataLayerAtt === 'structure' || currentDataLayerAtt === 'initial') {
                 setTimeout(function() {
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
     channel.on("click", ".globalPropertiesButton", function (event) {
         event.preventDefault();
-        if (Danta.site.GlobalButton.isLayerxPage() === true) {
+        if (Danta.site.GlobalButton.isDantaPage() === true) {
             Danta.site.GlobalButton.addButtonAttributes();
 
             //get attributes

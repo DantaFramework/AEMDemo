@@ -86,18 +86,18 @@ Danta.site.GlobalButton = {
         return editorLayerTemplate;
 
     },
-    isLayerxPage : function() {
-        var isLayerxPage = false;
+    isDantaPage : function() {
+        var isDantaPage = false;
         var iframeElement = document.getElementById("ContentFrame");
         var iframeDoc = iframeElement.contentDocument || iframeElement.contentWindow.document;
 
         if (null != iframeDoc) {
             var globalDataElement = iframeDoc.getElementById("xk-global-path");
             if (null != globalDataElement) {
-                isLayerxPage = true;
+                isDantaPage = true;
             }
         }
-        return isLayerxPage;
+        return isDantaPage;
     }
 
 }
