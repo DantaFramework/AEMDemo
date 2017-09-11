@@ -1,2 +1,14 @@
 {% initWCMScript "" %}
 {%> extrascripts %}
+
+{%! Global properties button. %}
+{%#if page.isClassicUIMode %}
+{%#if page.isDesignMode %}
+<button id="site-global-button" data-globaldialogpath="{%component.globalDialogPath%}" data-globalpath="{%component.globalPath%}">Global Properties</button>
+{%/if%}
+{%/if%}
+
+{%#if page.isTouchUIMode %}
+<div id="xk-global-path" xk-dialog-global-path="{% component.globalDialogPath %}" xk-content-global-path="{% component.globalPath %}"></div>
+{%/if%}
+

@@ -3,5 +3,5 @@
     jcr:primaryType="nt:unstructured"
     xk_clientAccessible="{Boolean}true"
     xk_clientModelProperties="[content,page]"
-    xk_componentCategory="[dantaaemdemo]"
+    xk_componentCategory="[dantademo]"
     xk_containerClasses="[xk-component]"/>

@@ -22,7 +22,7 @@ import static danta.aem.Constants.*;
 public class TemplateContextProcessor
         extends AbstractCheckComponentCategoryContextProcessor<TemplateContentModel> {
 
-    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("dantaaemdemo"));
+    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("dantademo"));
 
     @Override
     public Set<String> anyOf() {
