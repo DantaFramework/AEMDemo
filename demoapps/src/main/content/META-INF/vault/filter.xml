@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/apps/danta"/>
     <filter root="/apps/dantademo"/>
-    <filter root="/apps/jcrsyncr"/>
-    <filter root="/home/users/system/danta"/>
-    <filter root="/apps/rep:policy"/>
-    <filter root="/content/rep:policy"/>
-    <filter root="/conf/rep:policy"/>
 </workspaceFilter>
