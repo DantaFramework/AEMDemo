@@ -1,5 +1,0 @@
-#base=.
-
-Danta.js
-GlobalButton.js
-GlobalButtonInit.js

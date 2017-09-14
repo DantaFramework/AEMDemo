@@ -25,27 +25,7 @@
         <f0
             jcr:primaryType="nt:unstructured"
             mode="replace"
-            root="/apps/danta"
-            rules="[]"/>
-        <f1
-            jcr:primaryType="nt:unstructured"
-            mode="replace"
-            root="/home/users/system/danta"
-            rules="[]"/>
-        <f2
-            jcr:primaryType="nt:unstructured"
-            mode="replace"
-            root="/apps/rep:policy"
-            rules="[]"/>
-        <f3
-            jcr:primaryType="nt:unstructured"
-            mode="replace"
-            root="/content/rep:policy"
-            rules="[]"/>
-        <f4
-            jcr:primaryType="nt:unstructured"
-            mode="replace"
-            root="/conf/rep:policy"
+            root="/apps/dantademo"
             rules="[]"/>
     </filter>
 </jcr:root>

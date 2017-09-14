@@ -63,7 +63,7 @@ If maven build failed with error message, similar to below
 This is to "danta-config-service". To fix this:
 
  * Go to Package Manager (/crx/packmgr/index.jsp)
- * Upload [SystemUser-DantaDemo-1.0.0.zip](https://github.com/DantaFramework/AEMDemo/blob/master/SystemUser-DantaDemo-1.0.0.zip)
+ * Upload [SystemUser-DantaBase-1.0.0.zip](https://github.com/DantaFramework/AEMBase/blob/master/SystemUser-DantaBase-1.0.0.zip)
  * Install
  * Run maven build command again (re: Deploy to AEM)
  
