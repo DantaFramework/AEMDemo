@@ -48,11 +48,11 @@ Read [here](CONTRIBUTING.md) for more information.
 
 Build to author instance
 
-    mvn clean install -Pdeploy-aem
+    mvn clean install -Pdeploy-aem-package
 
 Build to publish instance
 
-    mvn clean install -Pdeploy-aem-publish
+    mvn clean install -Pdeploy-aem-package-publish
     
 ## Maven Build Failure
 

@@ -100,7 +100,7 @@
     </build>
     <profiles>
         <profile>
-            <id>deploy-aem</id>
+            <id>deploy-aem-package</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
@@ -127,7 +127,7 @@
             </build>
         </profile>
         <profile>
-            <id>deploy-aem-publish</id>
+            <id>deploy-aem-package-publish</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>

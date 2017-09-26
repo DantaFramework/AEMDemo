@@ -18,7 +18,12 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>Danta</groupId>
+    <parent>
+        <groupId>Danta</groupId>
+        <artifactId>Parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../Parent/pom.xml</relativePath>
+    </parent>
     <artifactId>DantaAEMDemo</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
@@ -413,18 +418,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <repositories>
-        <repository>
-            <id>danta-nexus</id>
-            <name>Danta Repository</name>
-            <url>http://repo.tikaltechnologies.io/repository/danta-group/</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>danta-nexus</id>
-            <name>Danta Repository</name>
-            <url>http://repo.tikaltechnologies.io/repository/danta-group/</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
