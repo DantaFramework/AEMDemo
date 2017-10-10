@@ -1,0 +1,2 @@
+#base=.
+reference-authoring.js

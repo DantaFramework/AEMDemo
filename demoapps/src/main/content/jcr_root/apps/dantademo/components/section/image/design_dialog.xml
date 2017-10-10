@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Image (Design)"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <min
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Minimal Size"
+            heightParameter="./minHeight"
+            widthParameter="./minWidth"
+            xtype="sizefield"/>
+        <max
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Maximal Size"
+            heightParameter="./maxHeight"
+            widthParameter="./maxWidth"
+            xtype="sizefield"/>
+    </items>
+</jcr:root>

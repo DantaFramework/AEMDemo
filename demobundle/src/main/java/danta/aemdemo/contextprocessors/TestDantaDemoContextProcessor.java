@@ -24,7 +24,7 @@ import static danta.aem.Constants.SLING_HTTP_REQUEST;
 public class TestDantaDemoContextProcessor extends
         AbstractCheckComponentCategoryContextProcessor<ContentModel> {
 
-    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("testdanta"));
+    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("predefinedlayout"));
 
     @Override
     public Set<String> anyOf() {

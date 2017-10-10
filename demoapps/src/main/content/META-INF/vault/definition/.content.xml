@@ -6,21 +6,21 @@
     jcr:lastModified="{Date}2017-07-14T18:49:36.834-06:00"
     jcr:lastModifiedBy="admin"
     jcr:primaryType="vlt:PackageDefinition"
-    acHandling="merge_preserve"
-    buildCount="2"
+    buildCount="1"
     builtWith="Adobe Experience Manager-6.3.0"
+    dependencies="[DantaFramework:DantaAEMBaseApps:1.0.0]"
     fixedBugs=""
     group="DantaFramework"
     lastUnwrapped="{Date}2017-07-14T18:49:36.834-06:00"
     lastUnwrappedBy="admin"
     lastWrapped="{Date}2017-07-14T18:49:36.834-06:00"
     lastWrappedBy="admin"
-    name="danta-base-components"
+    name="DantaAEMDemoApps"
     providerLink=""
     providerName=""
     providerUrl=""
     testedWith=""
-    version="140717">
+    version="1.0.0">
     <filter jcr:primaryType="nt:unstructured">
         <f0
             jcr:primaryType="nt:unstructured"

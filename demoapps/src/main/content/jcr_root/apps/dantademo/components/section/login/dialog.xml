@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Login"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <first
+                    jcr:primaryType="nt:unstructured"
+                    title="Log In"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <sectionLabel
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="Log in:"
+                            fieldLabel="Section Label"
+                            name="./sectionLabel"
+                            xtype="textfield"/>
+                        <usernameLabel
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="Username"
+                            fieldLabel="Username Label"
+                            name="./usernameLabel"
+                            xtype="textfield"/>
+                        <passwordLabel
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="Password"
+                            fieldLabel="Password Label"
+                            name="./passwordLabel"
+                            xtype="textfield"/>
+                        <loginLabel
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="Password"
+                            fieldLabel="Log In Button Label"
+                            name="./loginLabel"
+                            xtype="textfield"/>
+                        <redirectTo
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Redirect To"
+                            name="./redirectTo"
+                            xtype="pathfield"/>
+                        <invalidLoginText
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Defaults to: User name and password do not match"
+                            fieldDescription_commentI18n="Do not translate 'User name and password do not match'"
+                            fieldLabel="Invalid Login"
+                            name="./invalidLoginText"
+                            xtype="textfield"/>
+                        <sessionTimedOutText
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Defaults to: Session timed out, please login again"
+                            fieldDescription_commentI18n="Do not translate 'Session timed out, please login again'"
+                            fieldLabel="Session Timed Out"
+                            name="./sessionTimedOutText"
+                            xtype="textfield"/>
+                    </items>
+                </first>
+                <second
+                    jcr:primaryType="nt:unstructured"
+                    title="Already Logged In"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <continueLabel
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="Continue"
+                            fieldLabel="Continue Button Label"
+                            name="./continueLabel"
+                            xtype="textfield"/>
+                    </items>
+                </second>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

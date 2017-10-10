@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Download"
+    title="Download"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <description
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Description"
+            name="./jcr:description"
+            xtype="textarea"/>
+        <file
+            jcr:primaryType="cq:Widget"
+            autoUploadDelay="1"
+            ddGroups="[media]"
+            fieldLabel="File"
+            fileNameParameter="./fileName"
+            fileReferenceParameter="./fileReference"
+            name="./file"
+            xtype="html5smartfile"/>
+    </items>
+</jcr:root>

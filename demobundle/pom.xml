@@ -21,7 +21,7 @@
     <parent>
         <groupId>Danta</groupId>
         <artifactId>DantaAEMDemo</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>DantaAEMDemoBundle</artifactId>
@@ -40,46 +40,35 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>danta.aemdemo</Bundle-SymbolicName>
-                        <Bundle-Name>Danta AEM Demo</Bundle-Name>
-                        <Export-Package>
-                            danta.aemdemo
-                        </Export-Package>
-                        <Import-Package>
-                            danta.api.*; resolution:=mandatory,
-                            danta; resolution:=mandatory,
-                            danta.core.*; resolution:=mandatory,
-                            com.adobe.acs.commons.images; resolution:=mandatory,
-                            com.adobe.acs.commons.util; resolution:=mandatory,
-                            *;resolution:=optional
-                        </Import-Package>
-                        <Bundle-Activator>danta.aemdemo.AEMDemoActivator</Bundle-Activator>
+                        <Sling-Model-Packages>danta.aemdemo</Sling-Model-Packages>
+                        <Export-Package>danta.aemdemo</Export-Package>
+                        <Embed-Dependency>danta.api,danta.core,danta.aem</Embed-Dependency>
                     </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-scr-plugin</artifactId>
+                <version>1.23.0</version>
+                <executions>
+                    <execution>
+                        <id>generate-scr-descriptor</id>
+                        <goals>
+                            <goal>scr</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <!-- Development profile: install only the bundle -->
-        <profile>
-            <id>autoInstallBundle</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.sling</groupId>
-                        <artifactId>maven-sling-plugin</artifactId>
-                        <configuration>
-                            <slingUrlSuffix>/apps/danta/install/</slingUrlSuffix>
-                            <failOnError>true</failOnError>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
     <dependencies>
         <dependency>
             <groupId>Danta</groupId>
