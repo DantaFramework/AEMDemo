@@ -18,7 +18,7 @@
      class="${api.cssClass} ${allowed.cssClass}">
     <sly data-sly-test.isAllowedApplicable="${allowed.isApplicable}"
          data-sly-test="${isAllowedApplicable}"
-         data-sly-use.allowedTemplate="/libs/wcm/foundation/components/parsys/allowedcomponents/allowedcomponents-tpl.html"
+         data-sly-use.allowedTemplate="/libs/wcm/wcm/foundation/components/parsys/allowedcomponents/allowedcomponents-tpl.html"
          data-sly-call="${allowedTemplate.allowedcomponents @ title=allowed.title, components=allowed.components}"></sly>
     <sly data-sly-test="${!isAllowedApplicable}"
          data-sly-repeat.child="${api.paragraphs}"

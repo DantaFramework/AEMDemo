@@ -11,7 +11,7 @@
     <entry key="version">1.0.0</entry>
     <entry key="dependencies">DantaFramework:DantaAEMBaseApps:1.0.0</entry>
     <entry key="packageFormatVersion">2</entry>
-    <entry key="description"/>
+    <entry key="description">UI apps package for Danta AEM Demo</entry>
     <entry key="lastWrapped">2017-07-14T18:49:36.834-06:00</entry>
     <entry key="group">DantaFramework</entry>
     <entry key="lastWrappedBy">admin</entry>

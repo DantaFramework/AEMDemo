@@ -21,7 +21,7 @@
     <groupId>Danta</groupId>
     <artifactId>DantaAEMDemo</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>Danta AEM Demo</name>
     <modules>
         <module>demobundle</module>
@@ -155,6 +155,15 @@
                 <artifactId>AEM</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>uber-jar</artifactId>
+                <version>6.3.0</version>
+                <classifier>apis</classifier>
+                <scope>provided</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.scr</artifactId>
@@ -215,18 +224,6 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.adobe.aem</groupId>
-                <artifactId>uber-jar</artifactId>
-                <version>6.2.0-SP1</version>
-                <classifier>obfuscated-apis</classifier>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jsoup</groupId>
-                <artifactId>jsoup</artifactId>
-                <version>1.8.3</version>
-            </dependency>
-            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-exec</artifactId>
                 <version>1.0</version>
@@ -246,6 +243,11 @@
                 <groupId>net.minidev</groupId>
                 <artifactId>json-smart</artifactId>
                 <version>1.0.9</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.8.3</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
