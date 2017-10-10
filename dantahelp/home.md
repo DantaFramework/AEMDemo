@@ -6,6 +6,3 @@
 ## [6. Context Processor Execution](flow-control.md)  
 ## [7. Configuration Provider](config-provider.md)
 ## [8. Context Processor Priority](priority.md)
-## [9. FEBE](febe.md)
-
-[Go back to home](README.md)
