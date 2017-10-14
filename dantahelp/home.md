@@ -1,8 +1,0 @@
-## [1. Danta Prerrequisites - AEM](prerequisites.md)  
-## [2. AEM Implementation](aem-implementation.md)  
-## [3. Display Templates](display-templates.md)  
-## [4. Context Processors](context-processors.md)  
-## [5. Contexts](contexts.md)  
-## [6. Context Processor Execution](flow-control.md)  
-## [7. Configuration Provider](config-provider.md)
-## [8. Context Processor Priority](priority.md)

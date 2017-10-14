@@ -15,6 +15,7 @@ import org.apache.sling.commons.json.JSONArray;
 import org.apache.sling.commons.json.JSONException;
 import org.apache.sling.commons.json.JSONObject;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 
@@ -32,9 +33,11 @@ public class ColumnControlCtxtProcessor extends
     private static final String NUM = "num";
     private static final String COLS = "cols";
 
+    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("xkcolumncontrol"));
+
     @Override
     public Set<String> anyOf() {
-        return Sets.newHashSet("xkcolumncontrol");
+        return ANY_OF;
     }
 
     @Override

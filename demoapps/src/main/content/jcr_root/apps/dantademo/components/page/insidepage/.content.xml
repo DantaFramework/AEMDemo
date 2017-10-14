@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Component"
-    jcr:title="Breadcrumb - Danta"
-    sling:resourceSuperType="danta/components/section/base"
-    componentGroup="Danta AEM Demo"/>
+    jcr:title="Danta Demo - Inside Page"
+    sling:resourceSuperType="dantademo/components/page/htmlbase"
+    allowedPaths="/content(/.*)?"
+    componentGroup=".hidden"/>

@@ -31,7 +31,7 @@
                                     sling:resourceType="granite/ui/components/foundation/form/numberfield"
                                     fieldDescription="Leave empty to use the page title."
                                     fieldLabel="Number of Columns"
-                                    min="{Long}1"
+                                    min="{Long}0"
                                     max="{Long}12"
                                     name="./numcols"/>
                             <B_col1

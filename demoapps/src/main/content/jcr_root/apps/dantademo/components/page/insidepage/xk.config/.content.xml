@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
-    xk_clientAccessible="{Boolean}true"
-    xk_componentCategory="[breadcrumb]"
-    xk_containerClasses="[xk-breadcrumb]"/>
+    xk_componentCategory="[dantademo]"/>
