@@ -84,16 +84,37 @@
                     <group>DantaFramework</group>
                     <filterSource>${basedir}/src/main/content/META-INF/vault/filter.xml</filterSource>
                     <failOnError>true</failOnError>
+                    <properties>
+                        <acHandling>Merge</acHandling>
+                        <dependencies>DantaFramework:DantaAEMBaseApps:1.0.0</dependencies>
+                    </properties>
                     <embeddeds>
                         <embedded>
                             <groupId>Danta</groupId>
-                            <artifactId>DantaAEMDemoBundle</artifactId>
-                            <target>/apps/danta/install</target>
-                        </embedded>                  
+                                <artifactId>API</artifactId>
+                                <target>/apps/dantademo/install</target>
+                            </embedded>
+                        <embedded>
+                            <groupId>Danta</groupId>
+                            <artifactId>Core</artifactId>
+                            <target>/apps/dantademo/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>Danta</groupId>
+                            <artifactId>AEM</artifactId>
+                            <target>/apps/dantademo/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>Danta</groupId>
+                            <artifactId>DantaAEMBaseApps</artifactId>
+                            <target>/apps/dantademo/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>Danta</groupId>
+                        <artifactId>DantaAEMDemoBundle</artifactId>
+                            <target>/apps/dantademo/install</target>
+                        </embedded>
                     </embeddeds>
-                    <properties>
-                        <acHandling>Merge</acHandling>
-                    </properties>
                 </configuration>
             </plugin>
         </plugins>
@@ -159,6 +180,27 @@
             <groupId>Danta</groupId>
             <artifactId>DantaAEMDemoBundle</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>Danta</groupId>
+            <artifactId>Core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>Danta</groupId>
+            <artifactId>API</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>Danta</groupId>
+            <artifactId>AEM</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>Danta</groupId>
+            <artifactId>DantaAEMBaseApps</artifactId>
+            <version>1.0.0</version>
+            <type>zip</type>
         </dependency>
 		<dependency>
 		    <groupId>com.adobe.aem</groupId>

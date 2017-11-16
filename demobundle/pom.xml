@@ -44,7 +44,6 @@
                         <Bundle-Name>Danta AEM Demo</Bundle-Name>
                         <Export-Package>
                             danta.aemdemo,
-                            danta.aem.models.*
                         </Export-Package>
                         <Import-Package>
                             danta.api.*; resolution:=mandatory,
