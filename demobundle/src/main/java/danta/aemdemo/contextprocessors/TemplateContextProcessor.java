@@ -55,7 +55,7 @@ public class TemplateContextProcessor
             return getInheritanceProperty(res.getParent(), prop);
         }
         else {
-            return null;
+            return "";
         }
     }
 
