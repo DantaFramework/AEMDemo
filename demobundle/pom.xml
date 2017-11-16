@@ -40,49 +40,49 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Sling-Model-Packages>danta.aemdemo</Sling-Model-Packages>
+                        <Bundle-SymbolicName>danta.aemdemo</Bundle-SymbolicName>
+                        <Bundle-Name>Danta AEM Demo</Bundle-Name>
                         <Export-Package>
-                            danta.aemdemo.*
+                            danta.aemdemo,
+                            danta.aem.models.*
                         </Export-Package>
                         <Import-Package>
-                            danta.api.*;resolution:=mandatory,
+                            danta.api.*; resolution:=mandatory,
+                            danta; resolution:=mandatory,
                             danta.core.*; resolution:=mandatory,
-                            danta.aem.*;resolution:=mandatory,
-                            com.adobe.acs.commons.images;resolution:=mandatory,
-                            com.adobe.acs.commons.util;resolution:=mandatory,
+                            com.adobe.acs.commons.images; resolution:=mandatory,
+                            com.adobe.acs.commons.util; resolution:=mandatory,
                             *;resolution:=optional
                         </Import-Package>
-                        <Embed-Dependency>
-                            danta.api,
-                            danta.core,
-                            danta.aem
-                        </Embed-Dependency>
+                        <Bundle-Activator>danta.aemdemo.AEMDemoActivator</Bundle-Activator>
+                        <Sling-Model-Packages>danta.aem.models</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-scr-plugin</artifactId>
-                <version>1.23.0</version>
-                <executions>
-                    <execution>
-                        <id>generate-scr-descriptor</id>
-                        <goals>
-                            <goal>scr</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
+
         </plugins>
     </build>
+    <profiles>
+        <!-- Development profile: install only the bundle -->
+        <profile>
+            <id>autoInstallBundle</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <configuration>
+                            <slingUrlSuffix>/apps/danta/install/</slingUrlSuffix>
+                            <failOnError>true</failOnError>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
     <dependencies>
         <dependency>
             <groupId>Danta</groupId>
@@ -135,6 +135,8 @@
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.models.api</artifactId>
+            <version>1.2.2</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.sling</groupId>
@@ -145,7 +147,8 @@
 		<dependency>
 		    <groupId>com.adobe.aem</groupId>
 		    <artifactId>uber-jar</artifactId>
-		    <classifier>apis</classifier>
+		    <version>6.3.0</version>
+		    <classifier>obfuscated-apis</classifier> 
 		</dependency>
         <dependency>
             <groupId>org.jsoup</groupId>
@@ -166,6 +169,11 @@
         <dependency>
             <groupId>net.minidev</groupId>
             <artifactId>json-smart</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
         </dependency>
     </dependencies>
 </project>
