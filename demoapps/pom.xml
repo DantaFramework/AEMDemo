@@ -87,7 +87,7 @@
                     <failOnError>true</failOnError>
                     <properties>
                         <acHandling>Merge</acHandling>
-                        <dependencies>DantaFramework:DantaAEMBaseApps:${project.version}</dependencies>
+                        <dependencies>DantaFramework:DantaAEMBaseApps:1.0.0</dependencies>
                     </properties>
                     <embeddeds>
                         <embedded>
@@ -103,6 +103,11 @@
                         <embedded>
                             <groupId>Danta</groupId>
                             <artifactId>AEM</artifactId>
+                            <target>/apps/dantademo/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>Danta</groupId>
+                            <artifactId>DantaAEMBaseApps</artifactId>
                             <target>/apps/dantademo/install</target>
                         </embedded>
                         <embedded>
@@ -175,17 +180,24 @@
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>API</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>Core</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.0</version>
+
         </dependency>
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>AEM</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>Danta</groupId>
+            <artifactId>DantaAEMBaseApps</artifactId>
+            <version>1.0.0</version>
+            <type>zip</type>
         </dependency>
         <dependency>
             <groupId>Danta</groupId>
