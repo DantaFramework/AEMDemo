@@ -44,6 +44,7 @@
                         <Bundle-Name>Danta AEM Demo</Bundle-Name>
                         <Export-Package>
                             danta.aemdemo,
+                            danta.aemdemo.models
                         </Export-Package>
                         <Import-Package>
                             danta.api.*; resolution:=mandatory,
@@ -54,7 +55,7 @@
                             *;resolution:=optional
                         </Import-Package>
                         <Bundle-Activator>danta.aemdemo.AEMDemoActivator</Bundle-Activator>
-                        <Sling-Model-Packages>danta.aem.models</Sling-Model-Packages>
+                        <Sling-Model-Packages>danta.aemdemo.models</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
@@ -86,17 +87,17 @@
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>API</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>Core</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>AEM</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
