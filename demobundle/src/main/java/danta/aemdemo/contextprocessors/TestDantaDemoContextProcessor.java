@@ -24,7 +24,7 @@ import static danta.aem.Constants.SLING_HTTP_REQUEST;
 public class TestDantaDemoContextProcessor extends
         AbstractCheckComponentCategoryContextProcessor<ContentModel> {
 
-    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("testdanta"));
+    private static final Set<String> ANY_OF = Collections.unmodifiableSet(Sets.newHashSet("predefinedlayout"));
 
     @Override
     public Set<String> anyOf() {
@@ -40,33 +40,27 @@ public class TestDantaDemoContextProcessor extends
     public void process(ExecutionContext executionContext, ContentModel contentModel)
             throws ProcessException {
 
-        try {
-            final SlingHttpServletRequest request = (SlingHttpServletRequest) executionContext.get(SLING_HTTP_REQUEST);
-            JSONArray list = new JSONArray();
+        final SlingHttpServletRequest request = (SlingHttpServletRequest) executionContext.get(SLING_HTTP_REQUEST);
+        JSONArray list = new JSONArray();
 
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("id", "ID 1");
-            jsonObject.put("title", "value 1");
-            list.add(jsonObject);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id", "ID 1");
+        jsonObject.put("title", "value 1");
+        list.add(jsonObject);
 
-            jsonObject = new JSONObject();
-            jsonObject.put("id", "ID 2");
-            jsonObject.put("title", "value 2");
-            list.add(jsonObject);
+        jsonObject = new JSONObject();
+        jsonObject.put("id", "ID 2");
+        jsonObject.put("title", "value 2");
+        list.add(jsonObject);
 
-            contentModel.set("content.list", list);
+        contentModel.set("content.list", list);
 
-            ValueMap valueMap = request.getResource().getValueMap();
-            if (valueMap.containsKey("style")) {
-                contentModel.set("content."+valueMap.get("style", String.class), true);
-            }
-            if ("test me".equals(valueMap.get("heading", String.class))) {
-                contentModel.set("content.heading", "My test me heading: "+valueMap.get("heading", String.class) + " ...");
-            }
-
+        ValueMap valueMap = request.getResource().getValueMap();
+        if (valueMap.containsKey("style")) {
+            contentModel.set("content."+valueMap.get("style", String.class), true);
         }
-        catch (Exception e) {
-            log.error(e.getMessage(), e);
+        if ("test me".equals(valueMap.get("heading", String.class))) {
+            contentModel.set("content.heading", "My test me heading: "+valueMap.get("heading", String.class) + " ...");
         }
     }
 }

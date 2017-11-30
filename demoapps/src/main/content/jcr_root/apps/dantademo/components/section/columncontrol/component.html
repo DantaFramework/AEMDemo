@@ -1,0 +1,22 @@
+{%#if content.cols%}
+<div class="row">
+    {%#each content.cols%}
+    <div class="col-sm-{%this.num%}">
+        {%#if this.col1 %}{%> col1 %}{%/if%}
+        {%#if this.col2 %}{%> col2 %}{%/if%}
+        {%#if this.col3 %}{%> col3 %}{%/if%}
+        {%#if this.col4 %}{%> col4 %}{%/if%}
+        {%#if this.col5 %}{%> col5 %}{%/if%}
+        {%#if this.col6 %}{%> col6 %}{%/if%}
+        {%#if this.col7 %}{%> col7 %}{%/if%}
+        {%#if this.col8 %}{%> col8 %}{%/if%}
+        {%#if this.col9 %}{%> col9 %}{%/if%}
+        {%#if this.col10 %}{%> col10 %}{%/if%}
+        {%#if this.col11 %}{%> col11 %}{%/if%}
+        {%#if this.col12 %}{%> col12 %}{%/if%}
+    </div>
+    {%/each%}
+</div>
+{%else%}
+Column Control - Danta Component
+{%/if%}

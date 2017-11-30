@@ -1,0 +1,24 @@
+{%#if content.heading %}
+<h1>{%content.heading%}</h1>
+{%/if%}
+{%#if content.blurb %}
+<div>{%content.blurb%}</div>
+{%/if%}
+{%#if content.list %}
+    {%#if content.layout_List %}
+        {%> layout_List %}
+    {%/if%}
+    {%#if content.layout_Table %}
+        {%> layout_Table %}
+    {%/if%}
+    {%#if content.layout_Paragraph %}
+        {%> layout_Paragraph %}
+    {%/if%}
+{%/if%}
+{%#unless content.heading %}
+    {%#unless content.blurn %}
+        {%#unless content.layout_List %}
+            Predefined Layouts - Danta Component
+        {%/unless%}
+    {%/unless%}
+{%/unless%}

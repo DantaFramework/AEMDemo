@@ -72,58 +72,13 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.5</version>
             </plugin>
-            <!-- Maven Enforcer Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>enforce-maven</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <requireMavenVersion>
-                                    <version>[2.2.1,)</version>
-                                </requireMavenVersion>
-                                <requireJavaVersion>
-                                    <message>Project must be compiled with Java 7 or higher</message>
-                                    <version>1.7.0</version>
-                                </requireJavaVersion>
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <!-- Maven IntelliJ IDEA Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-idea-plugin</artifactId>
-                <version>2.2.1</version>
-                <configuration>
-                    <jdkLevel>1.7</jdkLevel>
-                    <linkModules>true</linkModules>
-                    <downloadSources>true</downloadSources>
-                </configuration>
-            </plugin>
-            <!-- Maven Eclipse Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-eclipse-plugin</artifactId>
-                <version>2.9</version>
-                <configuration>
-                    <downloadSources>true</downloadSources>
                 </configuration>
             </plugin>
         </plugins>
@@ -381,7 +336,7 @@
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>uber-jar</artifactId>
-                <version>6.2.0-SP1</version>
+                <version>6.3</version>
                 <classifier>obfuscated-apis</classifier>
                 <scope>provided</scope>
             </dependency>
