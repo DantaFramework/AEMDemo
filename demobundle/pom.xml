@@ -43,8 +43,7 @@
                         <Bundle-SymbolicName>danta.aemdemo</Bundle-SymbolicName>
                         <Bundle-Name>Danta AEM Demo</Bundle-Name>
                         <Export-Package>
-                            danta.aemdemo,
-                            danta.aemdemo.models
+                            danta.aemdemo
                         </Export-Package>
                         <Import-Package>
                             danta.api.*; resolution:=mandatory,
@@ -55,11 +54,9 @@
                             *;resolution:=optional
                         </Import-Package>
                         <Bundle-Activator>danta.aemdemo.AEMDemoActivator</Bundle-Activator>
-                        <Sling-Model-Packages>danta.aemdemo.models</Sling-Model-Packages>
                     </instructions>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
     <profiles>
@@ -87,17 +84,17 @@
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>API</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>Core</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>AEM</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
@@ -135,8 +132,6 @@
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.models.api</artifactId>
-            <version>1.2.2</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.sling</groupId>
@@ -147,7 +142,7 @@
 		<dependency>
 		    <groupId>com.adobe.aem</groupId>
 		    <artifactId>uber-jar</artifactId>
-		    <version>6.3.0</version>
+		    <version>6.2.0-SP1</version>
 		    <classifier>obfuscated-apis</classifier> 
 		</dependency>
         <dependency>
@@ -169,11 +164,6 @@
         <dependency>
             <groupId>net.minidev</groupId>
             <artifactId>json-smart</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>1</version>
         </dependency>
     </dependencies>
 </project>

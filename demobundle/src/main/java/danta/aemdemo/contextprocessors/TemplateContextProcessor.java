@@ -37,12 +37,15 @@ public class TemplateContextProcessor
     @Override
     public void process(final ExecutionContext executionContext, final TemplateContentModel contentModel)
             throws ProcessException {
-
-        final SlingHttpServletRequest request = (SlingHttpServletRequest) executionContext.get(SLING_HTTP_REQUEST);
-        Resource resource = request.getResource().getParent();
-        contentModel.set("page.bgImage", getInheritanceProperty(resource, "bgImage"));
-        contentModel.set("page.bgposition", getInheritanceProperty(resource, "bgposition"));
-        contentModel.set("page.siteID", getInheritanceProperty(resource, "jcr:siteID"));
+        try {
+            final SlingHttpServletRequest request = (SlingHttpServletRequest) executionContext.get(SLING_HTTP_REQUEST);
+            contentModel.set("page.bgImage", getInheritanceProperty(request.getResource().getParent(), "bgImage"));
+            contentModel.set("page.bgposition", getInheritanceProperty(request.getResource().getParent(), "bgposition"));
+            contentModel.set("page.siteID", getInheritanceProperty(request.getResource().getParent(), "jcr:siteID"));
+        }
+        catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
     }
 
     private String getInheritanceProperty(Resource res, String prop) {
@@ -55,7 +58,7 @@ public class TemplateContextProcessor
             return getInheritanceProperty(res.getParent(), prop);
         }
         else {
-            return "";
+            return null;
         }
     }
 
