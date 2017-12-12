@@ -111,7 +111,7 @@
                         </embedded>
                         <embedded>
                             <groupId>Danta</groupId>
-                        <artifactId>DantaAEMDemoBundle</artifactId>
+                            <artifactId>DantaAEMDemoBundle</artifactId>
                             <target>/apps/dantademo/install</target>
                         </embedded>
                     </embeddeds>
@@ -121,7 +121,7 @@
     </build>
     <profiles>
         <profile>
-            <id>deploy-aem</id>
+            <id>deploy-aem-package</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
@@ -199,7 +199,7 @@
         <dependency>
             <groupId>Danta</groupId>
             <artifactId>DantaAEMBaseApps</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.0.1-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
 		<dependency>
