@@ -87,7 +87,9 @@ public class SlidesContextProcessor extends
                 Page page = resolver.getResource(parentPage).adaptTo(Page.class);
                 Iterator<Page> items = page.listChildren();
                 while (items.hasNext()) {
-                    slides.add(props(page));
+                    Page child = items.next();
+                    slides.add(props(child));
+
                 }
                 break;
         }
