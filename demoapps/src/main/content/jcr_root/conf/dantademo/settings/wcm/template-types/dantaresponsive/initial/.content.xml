@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="dantademo/components/page/dantaresponsive"/>
+        sling:resourceType="dantademo/components/structure/dantaresponsive"/>
 </jcr:root>
