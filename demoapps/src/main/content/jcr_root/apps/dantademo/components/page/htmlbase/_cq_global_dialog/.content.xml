@@ -16,11 +16,26 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
+                    <navigationPath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        fieldLabel="Path to Navigation"
+                        name="./navigationPath"/>
+                    <siteName
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
+                        fieldLabel="Site Name"
+                        name="./siteName"/>
+                    <tagLine
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldLabel="Tagline"
+                        name="./tagLine"/>
+                    <copyright
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldLabel="Copyright"
+                        name="./copyright"/>
                 </items>
             </column>
         </items>
