@@ -1,22 +1,35 @@
-{%#if carousel%}
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        {%#each carousel.slides%}
-        <div class="carousel-item{%#if @first%} active{%/if%}">
-            <img class="d-block w-100" src="{% img %}" alt="{%title%}">
+<div class="bg-faded p-4 my-4">
+    {%#if carousel%}
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <ol class="carousel-indicators">
+                {%#each carousel.slides%}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{% @index %}" class="{%#if @first%}active{%/if%}"></li>
+                {%/each%}
+            </ol>
+            {%#each carousel.slides%}
+            <div class="carousel-item{%#if @first%} active{%/if%}">
+                <img class="d-block w-100" src="{% img %}" alt="{%title%}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="text-shadow">{% title %}</h3>
+                    <p class="text-shadow">{% desc %}</p>
+                </div>
+            </div>
+            {%/each%}
         </div>
-        {%/each%}
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+    {%/if%}
+    {%#unless carousel%}
+
+        Carousel - Danta Component
+    
+    {%/unless%}
 </div>
-{%/if%}
-{%#unless carousel%}
-Carousel - Danta Component
-{%/unless%}

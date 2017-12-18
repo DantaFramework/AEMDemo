@@ -49,6 +49,7 @@ public class SlidesContextProcessor extends
         JSONObject content = new JSONObject();
         Resource resource = request.getResource();
         properties = resource.getValueMap();
+
         String listFrom = properties.get("listFrom", String.class);
 
         if (listFrom != null)
