@@ -86,7 +86,7 @@
                     <failOnError>true</failOnError>
                     <properties>
                         <acHandling>Merge</acHandling>
-                        <dependencies>DantaFramework:DantaAEMBaseApps:1.0.0</dependencies>
+                        <dependencies>DantaFramework:DantaAEMBaseApps:1.0.1-SNAPSHOT</dependencies>
                     </properties>
                     <embeddeds>
                         <embedded>
@@ -148,7 +148,7 @@
             </build>
         </profile>
         <profile>
-            <id>deploy-aem-publish</id>
+            <id>deploy-aem-publish-package</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
