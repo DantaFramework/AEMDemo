@@ -1,4 +1,0 @@
-#base=js
-
-previewimg.js
-columncontrol.js
