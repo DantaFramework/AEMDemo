@@ -4,7 +4,7 @@
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="dantademo/components/page/dantaresponsive">
+        sling:resourceType="dantademo/components/structure/dantaresponsive">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid"/>
