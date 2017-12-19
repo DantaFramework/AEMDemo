@@ -1,20 +1,32 @@
+{%!
+* Danta AEM Demo Bunlde
+*
+* Copyright (C) 2017 Tikal Technologies, Inc. All rights reserved.
+*
+* Licensed under GNU Affero General Public License, Version v3.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      https://www.gnu.org/licenses/agpl-3.0.txt
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied;
+* without even the implied warranty of MERCHANTABILITY.
+* See the License for more details.
+* %}
+<div class="container">
+	<div class="bg-faded p-4 my-4">
+        <div class="text-center mt-4">
+            <div class="text-heading text-muted text-lg">Welcome To</div>
+            <h1 class="my-2">{%page.title%}</h1>
+            <div class="text-heading text-muted text-lg">By
+                <strong>Start Bootstrap</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container content">
     {%include "root" resourceType="wcm/foundation/components/responsivegrid"%}
-</div>
-<div class="container">
-    <div class="alert alert-dark" role="alert">
-        <h3>Page properties</h3>
-        <p>These properties are stored in {%page.path%}/jcr:content</p>
-        <p>Content Model stored by Out-of-the-box Context Processor</p>
-        <ul>
-            <li>content.bgImage: {%content.bgImage%}</li>
-            <li>content.bgposition: {%content.bgposition%}</li>
-        </ul>
-        <p>"page" Content Model, stored by custom Context Processor triggered by "dantademo" component category.
-            This is accessible by all AEM components dropped on a page built with a template that has "dantademo" as one of xk config categories (xk_componentCategory)</p>
-        <ul>
-            <li>page.bgImage: {%page.bgImage%}</li>
-            <li>page.bgposition: {%page.bgposition%}</li>
-        </ul>
-    </div>
 </div>
