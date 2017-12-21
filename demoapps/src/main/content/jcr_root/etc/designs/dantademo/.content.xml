@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <clientlibs/>
+    <jcr:content
+        cq:lastModified="{Date}2017-12-13T11:09:19.317-06:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/wcm/core/templates/designpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Danta Demo"
+        sling:resourceType="wcm/core/components/designer">
+        <global
+            jcr:lastModified="{Date}2017-12-13T11:09:19.315-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            copyright="Copyrights &amp;COPY; 2017 Tikal Technologies, Inc. All rights reserved."
+            navigationPath="/content/coffee-house"
+            siteName="Coffee House"
+            tagLine="Your local home for coffee."/>
+        <home jcr:primaryType="nt:unstructured">
+            <root
+                jcr:lastModified="{Date}2017-12-08T09:37:06.709-06:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                components="group:Danta AEM Demo"/>
+        </home>
+    </jcr:content>
+</jcr:root>
