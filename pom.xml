@@ -310,19 +310,19 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>Danta</groupId>
-                <artifactId>API</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <groupId>io.tikaltechnologies.danta</groupId>
+                <artifactId>api</artifactId>
+                <version>1.0.1</version>
             </dependency>
             <dependency>
-                <groupId>Danta</groupId>
-                <artifactId>Core</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <groupId>io.tikaltechnologies.danta</groupId>
+                <artifactId>core</artifactId>
+                <version>1.0.1</version>
             </dependency>
             <dependency>
-                <groupId>Danta</groupId>
-                <artifactId>AEM</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <groupId>io.tikaltechnologies.danta</groupId>
+                <artifactId>aem</artifactId>
+                <version>1.0.5</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>

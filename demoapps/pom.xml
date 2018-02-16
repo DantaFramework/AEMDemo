@@ -86,27 +86,27 @@
                     <failOnError>true</failOnError>
                     <properties>
                         <acHandling>Merge</acHandling>
-                        <dependencies>DantaFramework:DantaAEMBaseApps:1.0.1-SNAPSHOT</dependencies>
+                        <dependencies>DantaFramework:aem-base-apps:1.0.1</dependencies>
                     </properties>
                     <embeddeds>
                         <embedded>
-                            <groupId>Danta</groupId>
-                                <artifactId>API</artifactId>
+                            <groupId>io.tikaltechnologies.danta</groupId>
+                                <artifactId>api</artifactId>
                                 <target>/apps/dantademo/install</target>
                             </embedded>
                         <embedded>
-                            <groupId>Danta</groupId>
-                            <artifactId>Core</artifactId>
+                            <groupId>io.tikaltechnologies.danta</groupId>
+                            <artifactId>core</artifactId>
                             <target>/apps/dantademo/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>Danta</groupId>
-                            <artifactId>AEM</artifactId>
+                            <groupId>io.tikaltechnologies.danta</groupId>
+                            <artifactId>aem</artifactId>
                             <target>/apps/dantademo/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>Danta</groupId>
-                            <artifactId>DantaAEMBaseApps</artifactId>
+                            <groupId>io.tikaltechnologies.danta</groupId>
+                            <artifactId>aem-base-apps</artifactId>
                             <target>/apps/dantademo/install</target>
                         </embedded>
                         <embedded>
@@ -182,24 +182,24 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>Danta</groupId>
-            <artifactId>Core</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <groupId>io.tikaltechnologies.danta</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
-            <groupId>Danta</groupId>
-            <artifactId>API</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <groupId>io.tikaltechnologies.danta</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
-            <groupId>Danta</groupId>
-            <artifactId>AEM</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <groupId>io.tikaltechnologies.danta</groupId>
+            <artifactId>aem</artifactId>
+            <version>1.0.5</version>
         </dependency>
         <dependency>
-            <groupId>Danta</groupId>
-            <artifactId>DantaAEMBaseApps</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <groupId>io.tikaltechnologies.danta</groupId>
+            <artifactId>aem-base-apps</artifactId>
+            <version>1.0.1</version>
             <type>zip</type>
         </dependency>
 		<dependency>
