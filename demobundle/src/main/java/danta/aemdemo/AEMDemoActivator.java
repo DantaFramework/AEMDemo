@@ -1,5 +1,5 @@
 /**
- * Danta AEM Bundle
+ * Danta AEM Demo Bundle
  *
  * Copyright (C) 2017 Tikal Technologies, Inc. All rights reserved.
  *
