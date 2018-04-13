@@ -20,5 +20,10 @@
                     width="{Long}1200"/>
             </breakpoints>
         </cq:responsive>
+        <navigation
+            jcr:lastModified="{Date}2018-04-13T08:36:07.312-06:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="dantademo/components/section/navigation"/>
     </jcr:content>
 </jcr:root>
