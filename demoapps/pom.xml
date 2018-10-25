@@ -110,7 +110,7 @@
                             <target>/apps/dantademo/install</target>
                         </embedded>
                         <embedded>
-                            <groupId>Danta</groupId>
+                            <groupId>io.tikaltechnologies.danta</groupId>
                             <artifactId>DantaAEMDemoBundle</artifactId>
                             <target>/apps/dantademo/install</target>
                         </embedded>
@@ -177,7 +177,7 @@
     </profiles>
     <dependencies>
         <dependency>
-            <groupId>Danta</groupId>
+            <groupId>io.tikaltechnologies.danta</groupId>
             <artifactId>DantaAEMDemoBundle</artifactId>
             <version>${project.version}</version>
         </dependency>

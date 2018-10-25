@@ -403,7 +403,7 @@
             <dependency>
                 <groupId>com.adobe.acs</groupId>
                 <artifactId>acs-aem-commons-bundle</artifactId>
-                <version>3.6.0</version>
+                <version>3.17.0</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -413,4 +413,18 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <repositories>
+       <repository>
+            <id>danta-nexus</id>
+            <name>Danta Repository</name>
+            <url>http://repo.tikaltechnologies.io/repository/danta-group/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+       <pluginRepository>
+            <id>danta-nexus</id>
+            <name>Danta Repository</name>
+            <url>http://repo.tikaltechnologies.io/repository/danta-group/</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
