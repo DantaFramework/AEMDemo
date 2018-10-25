@@ -49,10 +49,6 @@ Read [here](CONTRIBUTING.md) for more information.
 Build to author instance
 
     mvn clean install -Pdeploy-aem-package
-
-Build to publish instance
-
-    mvn clean install -Pdeploy-aem-package-publish
     
 ## Maven Build Failure
 
@@ -66,6 +62,12 @@ This is to "danta-config-service". To fix this:
  * Upload [SystemUser-DantaBase-1.0.0.zip](https://github.com/DantaFramework/AEMBase/blob/master/SystemUser-DantaBase-1.0.0.zip)
  * Install
  * Run maven build command again (re: Deploy to AEM)
+
+ or you can install via command line:
+
+    curl -u admin:admin -F file=@"SystemUser-DantaBase-1.0.0.zip" -F name="SystemUser-DantaBase-1.0.0.zip" \
+            -F force=true -F install=true http://localhost:4505/crx/packmgr/service.jsp
+
  
 ## Credit
 
