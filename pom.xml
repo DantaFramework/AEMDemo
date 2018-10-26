@@ -36,6 +36,11 @@
         <sling.password>admin</sling.password>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
+         <!-- Danta version -->
+        <danta.api.version>1.0.2-SNAPSHOT</danta.api.version>
+        <danta.core.version>1.0.2-SNAPSHOT</danta.core.version>
+        <danta.aem.version>1.0.6-SNAPSHOT</danta.aem.version>
+        <danta.aem-base.version>1.0.2-SNAPSHOT</danta.aem-base.version>
     </properties>
     <build>
         <plugins>
@@ -307,17 +312,17 @@
             <dependency>
                 <groupId>io.tikaltechnologies.danta</groupId>
                 <artifactId>api</artifactId>
-                <version>1.0.1</version>
+                <version>${danta.api.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.tikaltechnologies.danta</groupId>
                 <artifactId>core</artifactId>
-                <version>1.0.1</version>
+                <version>${danta.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.tikaltechnologies.danta</groupId>
                 <artifactId>aem</artifactId>
-                <version>1.0.5</version>
+                <version>${danta.aem.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>
