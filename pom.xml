@@ -36,6 +36,11 @@
         <sling.password>admin</sling.password>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
+         <!-- Danta version -->
+        <danta.api.version>1.0.2-SNAPSHOT</danta.api.version>
+        <danta.core.version>1.0.2-SNAPSHOT</danta.core.version>
+        <danta.aem.version>1.0.6-SNAPSHOT</danta.aem.version>
+        <danta.aem-base.version>1.0.2-SNAPSHOT</danta.aem-base.version>
     </properties>
     <build>
         <plugins>
@@ -307,17 +312,17 @@
             <dependency>
                 <groupId>io.tikaltechnologies.danta</groupId>
                 <artifactId>api</artifactId>
-                <version>1.0.1</version>
+                <version>${danta.api.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.tikaltechnologies.danta</groupId>
                 <artifactId>core</artifactId>
-                <version>1.0.1</version>
+                <version>${danta.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.tikaltechnologies.danta</groupId>
                 <artifactId>aem</artifactId>
-                <version>1.0.5</version>
+                <version>${danta.aem.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.felix</groupId>
@@ -403,7 +408,7 @@
             <dependency>
                 <groupId>com.adobe.acs</groupId>
                 <artifactId>acs-aem-commons-bundle</artifactId>
-                <version>3.6.0</version>
+                <version>3.17.0</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -413,4 +418,18 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <repositories>
+       <repository>
+            <id>danta-nexus</id>
+            <name>Danta Repository</name>
+            <url>http://repo.tikaltechnologies.io/repository/danta-group/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+       <pluginRepository>
+            <id>danta-nexus</id>
+            <name>Danta Repository</name>
+            <url>http://repo.tikaltechnologies.io/repository/danta-group/</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
