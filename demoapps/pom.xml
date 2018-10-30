@@ -26,8 +26,10 @@
     </parent>
     <artifactId>DantaAEMDemoApps</artifactId>
     <packaging>content-package</packaging>
+
     <name>Danta AEM Demo - Apps</name>
     <description>UI apps package for Danta AEM Demo</description>
+
     <build>
         <resources>
             <resource>

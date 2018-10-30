@@ -26,8 +26,10 @@
     </parent>
     <artifactId>DantaAEMDemoBundle</artifactId>
     <packaging>bundle</packaging>
+
     <name>Danta AEM Demo - Bundle</name>
     <description>Core bundle for Danta AEM Demo</description>
+
     <build>
         <plugins>
             <plugin>
