@@ -6,26 +6,33 @@ Danta - AEM Demo Project is the maven project contained source codes specificall
 
 ## Prerequisites
 
- * [Danta - Parent Project](https://github.com/DantaFramework/Parent)
- * [Danta - API Project](https://github.com/DantaFramework/API)
- * [Danta - Core Project](https://github.com/DantaFramework/Core)
- * [Danta - AEM Project](https://github.com/DantaFramework/AEM)
  * Java 8
  * AEM 6.2 or later (for integration with AEM)
+ * ACS AEM Commons
 
 ## Documentation
 
+### Embedded Dependencies
+
+This project embeds Danta dependencies using `content-package-maven-plugin` plugin, and is actived with `deploy-aem-package` profile. Danta bundles and AEMBase package will be installed under `/apps/dantademo/install` directory. See more about [DantaFramework/AEM](https://github.com/DantaFramework/AEM)
+
 ### Installation
 
-  * Via AEM Package Manager, install [ACS AEM Commons 3.9.0](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases/tag/acs-aem-commons-3.9.0) or later
-  * Clone the following repositories into the same folder (i.e. C:\workspace\danta or /User/{username}/workspace/danta) 
-  then run the maven build command (refer to **Compile** section of README.md, for each repository) in the following order
-    * [AEM Demo](https://github.com/DantaFramework/AEMDemo)
-    * [Parent](https://github.com/DantaFramework/Parent)
-    * [API](https://github.com/DantaFramework/API)
-    * [Core](https://github.com/DantaFramework/Core)
-    * [AEM](https://github.com/DantaFramework/AEM)   
-    
+  * Via AEM Package Manager, install [ACS AEM Commons 3.17.0](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases/tag/acs-aem-commons-3.17.0) or later
+  * Clone this repository and review or change the Danta version in the pom.xml file
+
+  ```xml
+  <properties>
+        ...
+         <!-- Danta version -->
+        <danta.api.version>1.0.2-SNAPSHOT</danta.api.version>
+        <danta.core.version>1.0.2-SNAPSHOT</danta.core.version>
+        <danta.aem.version>1.0.6-SNAPSHOT</danta.aem.version>
+        <danta.aem-base.version>1.0.2-SNAPSHOT</danta.aem-base.version>
+    </properties>
+  ```
+  * Compile and deploy to AEM (See instructions below)
+
     **Note: for fresh installation, make sure to install ACS Common before running the maven build command**
 
 ### Official documentation
@@ -49,7 +56,11 @@ Read [here](CONTRIBUTING.md) for more information.
 Build to author instance
 
     mvn clean install -Pdeploy-aem-package
-    
+
+Build to publish instance
+
+    mvn clean install -Pdeploy-aem-publish-package
+
 ## Maven Build Failure
 
 If maven build failed with error message, similar to below
