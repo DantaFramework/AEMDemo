@@ -1,0 +1,13 @@
+{%!
+* simple image component
+%}
+
+<div class="img-component img-block container" data-img="block" data-width="100%" data-align="center">
+  {%#if content.fileReference %}
+    <picture>
+      <img class="img-responsive mb-4 img-fluid" src="{% content.imagePath %}" alt="{% content.alt %}">
+    </picture>
+  {%else%}
+    image component
+  {%/if%}
+</div>
